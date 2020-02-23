@@ -18,7 +18,6 @@ const styles = StyleSheet.create({
   borderDarker: { borderColor: '#606f7b' },
   borderDark: { borderColor: '#8795a1' },
   borderGray: { borderColor: '#b8c2cc' },
-
   borderLight: { borderColor: '#dae1e7' },
   borderLighter: { borderColor: '#f1f5f8' },
   borderLightest: { borderColor: '#f8fafc' },
@@ -26,6 +25,17 @@ const styles = StyleSheet.create({
   borderSolid: { borderStyle: 'solid' },
   borderDashed: { borderStyle: 'dashed' },
   borderDotted: { borderStyle: 'dotted' },
+
+  bgTransparent: { backgroundColor: 'transparent' },
+  bgBlack: { backgroundColor: '#000' },
+  bgDarkest: { backgroundColor: '#3d4852' },
+  bgDarker: { backgroundColor: '#606f7b' },
+  bgDark: { backgroundColor: '#8795a1' },
+  bgGray: { backgroundColor: '#b8c2cc' },
+  bgLight: { backgroundColor: '#dae1e7' },
+  bgLighter: { backgroundColor: '#f1f5f8' },
+  bgLightest: { backgroundColor: '#f8fafc' },
+  bgWhite: { backgroundColor: '#fff' },
 
   radius0: { borderRadius: 0 },
   radius1: { borderRadius: 1 },

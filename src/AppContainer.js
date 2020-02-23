@@ -1,7 +1,7 @@
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
-import * as views from './routes/index';
+import * as views from './routes';
 
 const appStack = createStackNavigator({
   homePage: {

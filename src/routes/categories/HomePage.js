@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { Text, View, StyleSheet, Image, FlatList, TouchableOpacity } from 'react-native';
 import { SafeAreaView } from 'react-navigation';
 
-import { Images, Styles } from '../global';
-import { categories } from '../global';
+import { Images, Styles, categories } from '../../global';
 
 class HomePage extends Component {
   renderCategories = ({ item }) => (

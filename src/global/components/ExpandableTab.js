@@ -1,91 +1,46 @@
 import React, { Component } from 'react';
-import { View, TouchableOpacity, Platform, UIManager, LayoutAnimation } from 'react-native';
+import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
-class ExpandableTab extends Component {
+import { Styles } from '../../global/constants';
+
+export default class Accordian extends Component {
   constructor(props) {
     super(props);
-
-    if (Platform.OS === 'android' && UIManager.setLayoutAnimationEnabledExperimental) {
-      UIManager.setLayoutAnimationEnabledExperimental(true);
-    }
-
-    this.animationConfig = {
-      duration: 700,
-      update: {
-        type: 'spring',
-        springDamping: 0.7,
-        property: 'scaleXY',
-      },
-    };
-
     this.state = {
-      minHeight: 0,
-      currentHeight: null,
-      collapsed: false,
-      initialized: false,
+      data: props.data,
+      expanded: false,
     };
-  }
-
-  setMinHeight(event) {
-    const { height: minHeight } = event.nativeEvent.layout;
-
-    this.setState({ minHeight }, () => {
-      this.setState({ initialized: true, currentHeight: minHeight });
-    });
-  }
-
-  toggle() {
-    const { minHeight, collapsed } = this.state;
-    const { onToggle, animationConfig } = this.props;
-    let nextHeight;
-
-    if (collapsed) {
-      nextHeight = minHeight;
-    } else {
-      nextHeight = null;
-    }
-
-    LayoutAnimation.configureNext({
-      ...this.animationConfig,
-      ...animationConfig,
-    });
-    this.setState({ currentHeight: nextHeight, collapsed: !collapsed }, () => {
-      if (onToggle) {
-        onToggle(this.state.collapsed);
-      }
-    });
   }
 
   render() {
-    const { initialized, currentHeight } = this.state;
-    const { numberOfVisibleItems, buttonContent, wrapperStyle, children } = this.props;
-
+    const { expanded } = this.state;
+    const { title, data } = this.props;
     return (
-      <View style={wrapperStyle}>
-        <View style={{ overflow: 'hidden', height: currentHeight }}>
-          <View style={{ flex: 1 }} onLayout={event => this.setMinHeight(event)}>
-            {React.Children.toArray(children).slice(0, numberOfVisibleItems)}
+      <View>
+        <TouchableOpacity
+          style={[s.row, s.justifyBetween, s.h56, s.pl24, s.pr16, s.itemsCenter, s.bgLight]}
+          onPress={() => this.toggleExpand()}>
+          <View style={[s.flex1]}>
+            <Text style={[s.font14, s.fontBold]}>{title}</Text>
           </View>
-          {initialized && (
-            <View>
-              {React.Children.toArray(children)
-                .slice(numberOfVisibleItems)
-                .map((item, index) => (
-                  <View key={index}>{item}</View>
-                ))}
-            </View>
-          )}
-        </View>
-        {numberOfVisibleItems < React.Children.count(children) && (
-          <View>
-            <TouchableOpacity onPress={() => this.toggle()} activeOpacity={0.8}>
-              {buttonContent}
-            </TouchableOpacity>
+          <Icon name={expanded ? 'keyboard-arrow-up' : 'keyboard-arrow-down'} size={30} />
+        </TouchableOpacity>
+        <View style={[s.h1, s.colorWhite, s.wFull]} />
+        {expanded && (
+          <View style={[s.bgWhite, s.p16]}>
+            <Text style={[s.font16]}>{data}</Text>
           </View>
         )}
       </View>
     );
   }
+
+  toggleExpand = () => {
+    this.setState(prevState => ({ expanded: !prevState.expanded }));
+  };
 }
 
-export default ExpandableTab;
+const s = StyleSheet.create({
+  ...Styles,
+});
