@@ -1,23 +1,40 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, Image } from 'react-native';
-import styles from '../styles';
-import { Images } from '../global/constants';
+import { Text, View, StyleSheet, Image, FlatList, TouchableOpacity } from 'react-native';
+import { SafeAreaView } from 'react-navigation';
+
+import { Images, Styles } from '../global';
+import { categories } from '../global';
 
 class HomePage extends Component {
+  renderCategories = ({ item }) => (
+    <TouchableOpacity
+      onPress={() => this.props.navigation.navigate(item.toScreen)}
+      style={[s.justifyCenter, s.itemsCenter, s.border1, s.mx2, s.shadow3, s.borderTransparent]}>
+      <Image source={item.image} style={{ width: 150, height: 150 }} resizeMode="contain" />
+    </TouchableOpacity>
+  );
+
   render() {
     return (
-      <View style={[s.flex1, s.itemsCenter]}>
-        <View style={[s.itemsCenter, s.flex1]}>
-          <Image source={Images.DUMMY_IMAGE} style={[s.h256, s.wFull]} />
-          <Text>ksksks</Text>
+      <SafeAreaView>
+        <View>
+          <Image source={Images.DUMMY_IMAGE} resizeMode="contain" />
         </View>
-      </View>
+        <View style={[s.mt24]}>
+          <FlatList
+            horizontal
+            data={categories}
+            renderItem={this.renderCategories}
+            keyExtractor={item => item.id}
+          />
+        </View>
+      </SafeAreaView>
     );
   }
 }
 
 const s = StyleSheet.create({
-  ...styles,
+  ...Styles,
 });
 
 export default HomePage;

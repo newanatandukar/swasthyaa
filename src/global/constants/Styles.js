@@ -314,6 +314,8 @@ const styles = StyleSheet.create({
   mx0: { marginLeft: 0, marginRight: 0 },
   my1: { marginTop: 1, marginBottom: 1 },
   mx1: { marginLeft: 1, marginRight: 1 },
+  my2: { marginTop: 2, marginBottom: 2 },
+  mx2: { marginLeft: 2, marginRight: 2 },
   my4: { marginTop: 4, marginBottom: 4 },
   mx4: { marginLeft: 4, marginRight: 4 },
   my8: { marginTop: 8, marginBottom: 8 },
