@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
-import { Text, View } from 'react-native';
+import { FlatList } from 'react-native';
+import { ExpandableTab, nutrition } from '../../global';
 
 class Nutrition extends Component {
+  renderCategories = ({ item }) => <ExpandableTab title={item.heading} data={item.content} />;
+
   render() {
     return (
-      <View>
-        <Text>Nutrition</Text>
-      </View>
+      <FlatList
+        data={nutrition}
+        renderItem={this.renderCategories}
+        keyExtractor={item => item.id}
+      />
     );
   }
 }
