@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
 
-import styles from '../styles';
+import { Styles } from '../global/constants';
 
 class Profile extends Component {
   render() {
@@ -19,7 +19,7 @@ class Profile extends Component {
 }
 
 const s = StyleSheet.create({
-  ...styles,
+  ...Styles,
 });
 
 export default Profile;

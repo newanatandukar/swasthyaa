@@ -1,4 +1,13 @@
 export default {
-  // logo
-  DUMMY_IMAGE: require('../../assets/images/dummyImage.jpg'),
+  DUMMY_IMAGE: require('../../assets/images/other/dummyImage.jpg'),
+
+  //categories
+  IMAGE_1_1: require('../../assets/images/categories/1-1.jpg'),
+  IMAGE_2_1: require('../../assets/images/categories/2-1.jpg'),
+  IMAGE_3_1: require('../../assets/images/categories/3-1.jpg'),
+  IMAGE_4_1: require('../../assets/images/categories/4-1.jpg'),
+  IMAGE_5_1: require('../../assets/images/categories/5-1.jpg'),
+  IMAGE_6_1: require('../../assets/images/categories/6-1.jpg'),
+  IMAGE_7_1: require('../../assets/images/categories/7-1.jpg'),
+  IMAGE_8_1: require('../../assets/images/categories/8-1.jpg'),
 };
