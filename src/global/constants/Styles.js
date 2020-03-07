@@ -37,6 +37,7 @@ const styles = StyleSheet.create({
   bgLightest: { backgroundColor: '#f8fafc' },
   bgWhite: { backgroundColor: '#fff' },
   bgPurple: { backgroundColor: '#5C4DB1' },
+  bgLightPurple: { backgroundColor: '#E3E5F9' },
 
   radius0: { borderRadius: 0 },
   radius1: { borderRadius: 1 },
@@ -261,7 +262,7 @@ const styles = StyleSheet.create({
       width: 0,
       height: 1,
     },
-    shadowOpacity: 0.22,
+    shadowOpacity: 0.99,
     shadowRadius: 2.22,
     elevation: 3,
   },
