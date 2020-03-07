@@ -36,6 +36,7 @@ const styles = StyleSheet.create({
   bgLighter: { backgroundColor: '#f1f5f8' },
   bgLightest: { backgroundColor: '#f8fafc' },
   bgWhite: { backgroundColor: '#fff' },
+  bgPurple: { backgroundColor: '#5C4DB1' },
 
   radius0: { borderRadius: 0 },
   radius1: { borderRadius: 1 },
@@ -43,7 +44,11 @@ const styles = StyleSheet.create({
   radius4: { borderRadius: 4 },
   radius6: { borderRadius: 6 },
   radius8: { borderRadius: 8 },
+  radius16: { borderRadius: 16 },
+  radius32: { borderRadius: 32 },
   radius999: { borderRadius: 999 },
+
+  radiusTop32: { borderTopLeftRadius: 32, borderTopRightRadius: 32 },
 
   dnone: { display: 'none' },
   flex: { display: 'flex' },

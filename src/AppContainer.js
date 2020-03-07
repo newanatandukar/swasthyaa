@@ -92,7 +92,7 @@ const TabScreen = createBottomTabNavigator({
 
 const appContainer = createSwitchNavigator({
   // profile: views.Profile,
-  TabScreen,
+  appStack,
 });
 
 export default createAppContainer(appContainer);
