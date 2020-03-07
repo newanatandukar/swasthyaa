@@ -1,5 +1,6 @@
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
 
 import * as views from './routes';
 
@@ -68,9 +69,30 @@ const appStack = createStackNavigator({
   },
 });
 
+const TabScreen = createBottomTabNavigator({
+  Home: {
+    screen: appStack,
+    navigationOptions: {
+      tabBarLabel: 'Home',
+    },
+  },
+  News: {
+    screen: views.FamilyPlanning,
+    navigationOptions: {
+      tabBarLabel: 'News',
+    },
+  },
+  Video: {
+    screen: views.FamilyPlanning,
+    navigationOptions: {
+      tabBarLabel: 'Audio/Video',
+    },
+  },
+});
+
 const appContainer = createSwitchNavigator({
   // profile: views.Profile,
-  appStack,
+  TabScreen,
 });
 
 export default createAppContainer(appContainer);

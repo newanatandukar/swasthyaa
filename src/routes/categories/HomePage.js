@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Text, View, StyleSheet, Image, FlatList, TouchableOpacity } from 'react-native';
-import { SafeAreaView } from 'react-navigation';
 
-import { Images, Styles, categories } from '../../global';
+import { Images, Styles, categories, TimeView } from '../../global';
 
 class HomePage extends Component {
   renderCategories = ({ item }) => (
@@ -15,7 +14,9 @@ class HomePage extends Component {
 
   render() {
     return (
-      <SafeAreaView>
+      <View>
+        <TimeView />
+
         <View>
           <Image source={Images.DUMMY_IMAGE} resizeMode="contain" />
         </View>
@@ -27,7 +28,7 @@ class HomePage extends Component {
             keyExtractor={item => item.id}
           />
         </View>
-      </SafeAreaView>
+      </View>
     );
   }
 }
