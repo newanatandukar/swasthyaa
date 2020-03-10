@@ -7,6 +7,7 @@ import std from './std';
 import childCare from './childCare';
 import nutrition from './nutrition';
 import diseases from './diseases';
+import news from './news';
 
 export {
   categories,
@@ -18,4 +19,5 @@ export {
   childCare,
   nutrition,
   diseases,
+  news,
 };

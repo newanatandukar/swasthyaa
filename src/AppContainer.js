@@ -67,6 +67,12 @@ const appStack = createStackNavigator({
       headerBackTitleVisible: false,
     },
   },
+  newsView: {
+    screen: views.NewsView,
+    navigationOptions: {
+      headerBackTitleVisible: false,
+    },
+  },
 });
 
 const TabScreen = createBottomTabNavigator({
