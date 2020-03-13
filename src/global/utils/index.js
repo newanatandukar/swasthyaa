@@ -1,4 +1,5 @@
 import categories from './categories';
+import campaigns from './campaigns';
 import childHealth from './childHealth';
 import femaleHealthVolunteers from './femaleHealthVolunteers';
 import familyPlanning from './familyPlanning';
@@ -13,6 +14,7 @@ import videos from './videos';
 
 export {
   categories,
+  campaigns,
   childHealth,
   femaleHealthVolunteers,
   familyPlanning,

@@ -2,7 +2,7 @@ const videos = [
   {
     id: 'videos-1-1',
     title: 'महिनावारी',
-    link: 'https://www.youtube.com/watch?v=HKOZJc6vy2I',
+    link: 'https://www.youtube.com/watch?v=PT-_8aFIbk',
   },
   {
     id: 'videos-2-1',

@@ -200,6 +200,8 @@ const styles = StyleSheet.create({
   colorLightest: { color: '#f8fafc' },
   colorBlack: { color: '#221E20' },
   colorWhite: { color: '#f4f4f4' },
+  colorTheme: { color: '#5C4DB1' },
+  colorLightTheme: { color: '#E3E5F9' },
   secondaryTheme: { color: '#DA5289' },
   iconThemeColor: { color: '#4357F9' },
 

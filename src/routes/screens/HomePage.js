@@ -18,6 +18,7 @@ import {
   SearchBar,
   Thumbnail,
   categories,
+  campaigns,
   quickLinks,
   news,
   videos,
@@ -64,11 +65,37 @@ class HomePage extends Component {
 
     return (
       <TouchableOpacity
-        onPress={() => this.props.navigation.navigate('newsView', { link: item.link })}
+        onPress={() => this.props.navigation.navigate('newsView', { item })}
         style={viewStyle}>
         <Image source={item.image} style={imageStyle} resizeMode="contain" resizeMethod="scale" />
         <Text>{item.title}</Text>
       </TouchableOpacity>
+    );
+  };
+
+  renderCampaigns = ({ item }) => {
+    const viewStyle = [
+      s.justifyCenter,
+      s.itemsCenter,
+      s.border1,
+      s.shadow3,
+      s.borderTransparent,
+      s.overflowHidden,
+      s.bgLightTheme,
+      s.radius8,
+      s.mx4,
+      s.p8,
+      { width: 128, height: 128 },
+    ];
+    const textStyle = [s.selfCenter, s.mt12, s.colorTheme, s.fontBold, s.font16];
+
+    return (
+      <View style={viewStyle}>
+        <Icon name={item.icon} size={28} color="#DA5289" />
+        <Text style={textStyle} textBreakStrategy="highQuality">
+          {item.title}
+        </Text>
+      </View>
     );
   };
 
@@ -121,7 +148,7 @@ class HomePage extends Component {
       <ScrollView contentContainerStyle={[s.bgTheme]}>
         <TimeView />
         <View style={contentStyle}>
-          <ImageView style={[s.flex1]} />
+          <ImageView style={[s.flex1]} navigate={this.props.navigation.navigate} />
           <View style={marqueeStyle}>
             <TextTicker
               style={marqueeTextStyle}
@@ -160,8 +187,8 @@ class HomePage extends Component {
             <FlatList
               horizontal
               showsHorizontalScrollIndicator={false}
-              data={news}
-              renderItem={this.renderNews}
+              data={campaigns}
+              renderItem={this.renderCampaigns}
               keyExtractor={item => item.id}
             />
           </View>
