@@ -9,6 +9,7 @@ import nutrition from './nutrition';
 import diseases from './diseases';
 import news from './news';
 import quickLinks from './quickLinks';
+import videos from './videos';
 
 export {
   categories,
@@ -22,4 +23,5 @@ export {
   diseases,
   news,
   quickLinks,
+  videos,
 };

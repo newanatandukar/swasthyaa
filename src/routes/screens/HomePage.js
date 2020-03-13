@@ -11,7 +11,17 @@ import {
 import TextTicker from 'react-native-text-ticker';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-import { ImageView, Styles, TimeView, SearchBar, categories, quickLinks, news } from '../../global';
+import {
+  ImageView,
+  Styles,
+  TimeView,
+  SearchBar,
+  Thumbnail,
+  categories,
+  quickLinks,
+  news,
+  videos,
+} from '../../global';
 
 class HomePage extends Component {
   renderCategories = ({ item }) => {
@@ -86,10 +96,21 @@ class HomePage extends Component {
     );
   };
 
+  renderVideos = ({ item }) => {
+    return (
+      <Thumbnail
+        showPlayIcon
+        url={item.link}
+        containerStyle={[s.shadow, s.m4, s.radius6, s.itemsCenter, s.overflowHidden, s.flex1]}
+        imageHeight={120}
+      />
+    );
+  };
+
   render() {
     const contentStyle = [s.bgLighter, s.flex1, s.pt4, s.radiusTop32];
     const categoryStyle = [s.py8, s.pl16, s.my8];
-    const quickLinkStyle = [s.py8, s.px16, s.my8];
+    const xMarginStyle = [s.py8, s.px16, s.my8];
     const categoryContentTextStyle = [s.fontBold, s.font16, s.mb8];
     const marqueeStyle = [s.justifyCenter, s.itemsCenter, s.px4, s.bgLightPink, s.py12, s.mt8];
     const marqueeTextStyle = [s.colorPink];
@@ -124,7 +145,7 @@ class HomePage extends Component {
             />
           </View>
           <SearchBar />
-          <View style={quickLinkStyle}>
+          <View style={xMarginStyle}>
             <Text style={categoryContentTextStyle}>Quick Links</Text>
             <FlatList
               data={quickLinks}
@@ -150,6 +171,15 @@ class HomePage extends Component {
               showsHorizontalScrollIndicator={false}
               data={news}
               renderItem={this.renderNews}
+              keyExtractor={item => item.id}
+            />
+          </View>
+          <View style={xMarginStyle}>
+            <Text style={categoryContentTextStyle}>Videos</Text>
+            <FlatList
+              data={videos}
+              numColumns={2}
+              renderItem={this.renderVideos}
               keyExtractor={item => item.id}
             />
           </View>

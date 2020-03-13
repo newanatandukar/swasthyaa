@@ -10,4 +10,7 @@ export default {
   IMAGE_6_1: require('../../assets/images/categories/6-1.jpg'),
   IMAGE_7_1: require('../../assets/images/categories/7-1.jpg'),
   IMAGE_8_1: require('../../assets/images/categories/8-1.jpg'),
+
+  //utils
+  PLAY: require('../../assets/images/other/play.png'),
 };
