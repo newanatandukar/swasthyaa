@@ -103,6 +103,7 @@ class HomePage extends Component {
         url={item.link}
         containerStyle={[s.shadow, s.m4, s.radius6, s.itemsCenter, s.overflowHidden, s.flex1]}
         imageHeight={120}
+        onPress={() => this.props.navigation.navigate('videoView', { item })}
       />
     );
   };
