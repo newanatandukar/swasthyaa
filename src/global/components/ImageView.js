@@ -8,7 +8,7 @@ const ImageView = props => {
   const { viewStyle, imageStyle } = props;
   return (
     <View style={viewStyle}>
-      <Image source={Images.DUMMY_IMAGE} resizeMode="contain" style={imageStyle} />
+      <Image source={Images.DUMMY_IMAGE} resizeMode="cover" style={imageStyle} />
     </View>
   );
 };
@@ -23,7 +23,7 @@ ImageView.propTypes = {
 };
 
 ImageView.defaultProps = {
-  viewStyle: [s.m16, s.radius16, s.overflowHidden, s.relative, s.h2_5],
+  viewStyle: [s.m16, s.radius16, s.overflowHidden, s.relative, s.maxWidthFull, s.maxHeightHalf],
   imageStyle: [s.radius16, s.flex1],
 };
 

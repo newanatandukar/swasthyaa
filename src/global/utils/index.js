@@ -8,6 +8,7 @@ import childCare from './childCare';
 import nutrition from './nutrition';
 import diseases from './diseases';
 import news from './news';
+import quickLinks from './quickLinks';
 
 export {
   categories,
@@ -20,4 +21,5 @@ export {
   nutrition,
   diseases,
   news,
+  quickLinks,
 };

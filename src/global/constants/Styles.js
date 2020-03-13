@@ -37,7 +37,9 @@ const styles = StyleSheet.create({
   bgLightest: { backgroundColor: '#f8fafc' },
   bgWhite: { backgroundColor: '#fff' },
   bgPurple: { backgroundColor: '#5C4DB1' },
+  bgDarkPurple: { backgroundColor: '#E6E8FC' },
   bgLightPurple: { backgroundColor: '#E3E5F9' },
+  bgLightPink: { backgroundColor: '#F5D3E1' },
 
   radius0: { borderRadius: 0 },
   radius1: { borderRadius: 1 },
@@ -153,6 +155,8 @@ const styles = StyleSheet.create({
 
   maxHeightFull: { maxHeight: '100%' },
   maxWidthFull: { maxWidth: '100%' },
+  maxHeightHalf: { maxHeight: '25%' },
+  maxWidthHalf: { maxWidth: '50%' },
   minHeight0: { minHeight: 0 },
   minHeightFull: { minHeight: '100%' },
   minWidth0: { minWidth: 0 },
@@ -196,6 +200,7 @@ const styles = StyleSheet.create({
   colorLightest: { color: '#f8fafc' },
   colorBlack: { color: '#221E20' },
   colorWhite: { color: '#f4f4f4' },
+  colorPink: { color: '#DA5289' },
 
   strikeThrough: { textDecorationLine: 'line-through', textDecorationColor: '#b33423' },
 
