@@ -1,14 +1,21 @@
 import React from 'react';
 import { Image, View, StyleSheet } from 'react-native';
+import { SliderBox } from 'react-native-image-slider-box';
 import PropTypes from 'prop-types';
 
 import { Styles, Images } from '../constants';
 
+const images = [
+  'https://source.unsplash.com/1024x768/?nature',
+  'https://source.unsplash.com/1024x768/?water',
+  'https://source.unsplash.com/1024x768/?girl',
+  'https://source.unsplash.com/1024x768/?tree',
+];
 const ImageView = props => {
   const { viewStyle, imageStyle } = props;
   return (
     <View style={viewStyle}>
-      <Image source={Images.DUMMY_IMAGE} resizeMode="cover" style={imageStyle} />
+      <SliderBox images={images} />
     </View>
   );
 };
@@ -23,7 +30,7 @@ ImageView.propTypes = {
 };
 
 ImageView.defaultProps = {
-  viewStyle: [s.m16, s.radius16, s.overflowHidden, s.relative, s.maxWidthFull, s.maxHeightHalf],
+  viewStyle: [s.m16, s.radius16, s.overflowHidden, s.relative, s.maxWidthFull],
   imageStyle: [s.radius16, s.flex1],
 };
 

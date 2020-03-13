@@ -2,37 +2,37 @@ const quickLinks = [
   {
     id: 'quickLinks-1-1',
     icon: 'camera',
-    title: 'Khop Talika',
+    title: 'खोप तालिका',
     link: 'underConstruction',
   },
   {
     id: 'quickLinks-2-1',
     icon: 'apps',
-    title: 'nisulka swasthya sdfsdfsdfdsfsdf fdf',
+    title: 'निशुल्क स्वास्थ्य सेवा',
     link: 'underConstruction',
   },
   {
     id: 'quickLinks-3-1',
     icon: 'mail',
-    title: 'swasthya bima',
+    title: 'स्वास्थ्य बिमा',
     link: 'underConstruction',
   },
   {
     id: 'quickLinks-4-1',
     icon: 'archive',
-    title: `Documents`,
+    title: `कागजातहरु`,
     link: 'underConstruction',
   },
   {
     id: 'quickLinks-5-1',
     icon: 'contacts',
-    title: `Audio`,
+    title: `अडियो`,
     link: 'underConstruction',
   },
   {
     id: 'quickLinks-6-1',
     icon: 'photo',
-    title: `Video`,
+    title: `भिडियो`,
     link: 'underConstruction',
   },
 ];

@@ -90,25 +90,27 @@ class HomePage extends Component {
     const categoryStyle = [s.py8, s.pl16, s.my8];
     const quickLinkStyle = [s.py8, s.px16, s.my8];
     const categoryContentTextStyle = [s.fontBold, s.font16, s.mb8];
-    const marqueeStyle = [s.justifyCenter, s.itemsCenter, s.bgLightPink, s.px8, s.py12, s.mt8];
+    const marqueeStyle = [s.justifyCenter, s.itemsCenter, s.px4, s.bgLightPink, s.py12, s.mt8];
     const marqueeTextStyle = [s.colorPink];
 
+    const a = 'https://www.nepalihealth.com/feed/';
     return (
       <ScrollView contentContainerStyle={[s.bgPurple]}>
         <TimeView />
         <View style={contentStyle}>
-          <ImageView />
+          <ImageView style={[s.flex1]} />
           <View style={marqueeStyle}>
             <TextTicker
               style={marqueeTextStyle}
               duration={10000}
               loop
-              bounce
-              animationType="auto"
+              scroll
+              animationType="scroll"
+              marqueeOnMount
               scrollSpeed={100}
               repeatSpacer={50}
               marqueeDelay={1000}>
-              Super long piece of text is long. The quick brown fox jumps over the lazy dog.
+              कसरी आफ्नो बच्चको रोगसँग बच्ने क्षमता बढाउन सकिन्छ ? लोरेम इप्सुम दोलोर सित ....
             </TextTicker>
           </View>
           <View style={categoryStyle}>
