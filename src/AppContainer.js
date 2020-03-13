@@ -73,6 +73,13 @@ const appStack = createStackNavigator({
       headerBackTitleVisible: false,
     },
   },
+  underConstruction: {
+    screen: views.UnderConstruction,
+    navigationOptions: {
+      headerTitle: 'Under Construction',
+      headerBackTitleVisible: false,
+    },
+  },
 });
 
 const TabScreen = createBottomTabNavigator({

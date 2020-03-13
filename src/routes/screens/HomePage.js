@@ -11,7 +11,7 @@ import {
 import TextTicker from 'react-native-text-ticker';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-import { ImageView, Styles, categories, TimeView, SearchBar, quickLinks, news } from '../../global';
+import { ImageView, Styles, TimeView, SearchBar, categories, quickLinks, news } from '../../global';
 
 class HomePage extends Component {
   renderCategories = ({ item }) => {
@@ -64,7 +64,8 @@ class HomePage extends Component {
 
   renderQuickLinks = ({ item }) => {
     return (
-      <View
+      <TouchableOpacity
+        onPress={() => this.props.navigation.navigate(item.link)}
         style={[
           s.flex1,
           s.bgLightPurple,
@@ -81,7 +82,7 @@ class HomePage extends Component {
         <Text textBreakStrategy="highQuality" style={[s.px4]}>
           {item.title}
         </Text>
-      </View>
+      </TouchableOpacity>
     );
   };
 
