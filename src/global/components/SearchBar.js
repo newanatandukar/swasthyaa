@@ -35,7 +35,7 @@ SearchBar.propTypes = {
 SearchBar.defaultProps = {
   viewStyle: [
     s.row,
-    s.bgLightPurple,
+    s.bgLightTheme,
     s.border1,
     s.borderTransparent,
     s.radius8,

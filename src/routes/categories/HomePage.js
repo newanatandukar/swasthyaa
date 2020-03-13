@@ -16,7 +16,7 @@ class HomePage extends Component {
     const contentStyle = [s.bgWhite, s.flex1, s.pt4, s.radiusTop32];
 
     return (
-      <ScrollView style={[s.bgPurple]}>
+      <ScrollView style={[s.bgTheme]}>
         <TimeView />
         <View style={contentStyle}>
           <ImageView />

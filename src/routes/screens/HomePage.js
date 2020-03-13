@@ -78,7 +78,7 @@ class HomePage extends Component {
         onPress={() => this.props.navigation.navigate(item.link)}
         style={[
           s.flex1,
-          s.bgLightPurple,
+          s.bgLightTheme,
           s.p8,
           s.m4,
           s.radius6,
@@ -86,8 +86,8 @@ class HomePage extends Component {
           s.itemsCenter,
           s.overflowHidden,
         ]}>
-        <View style={[s.bgDarkPurple, s.p4, s.radius6]}>
-          <Icon name={item.icon} size={28} color="#00aced" />
+        <View style={[s.bgDarkTheme, s.p4, s.radius6]}>
+          <Icon name={item.icon} size={28} color="#4357F9" />
         </View>
         <Text textBreakStrategy="highQuality" style={[s.px4]}>
           {item.title}
@@ -112,12 +112,12 @@ class HomePage extends Component {
     const categoryStyle = [s.py8, s.pl16, s.my8];
     const xMarginStyle = [s.py8, s.px16, s.my8];
     const categoryContentTextStyle = [s.fontBold, s.font16, s.mb8];
-    const marqueeStyle = [s.justifyCenter, s.itemsCenter, s.px4, s.bgLightPink, s.py12, s.mt8];
-    const marqueeTextStyle = [s.colorPink];
+    const marqueeStyle = [s.justifyCenter, s.itemsCenter, s.px4, s.bgLightSecTheme, s.py12, s.mt8];
+    const marqueeTextStyle = [s.secondaryTheme];
 
     const a = 'https://www.nepalihealth.com/feed/';
     return (
-      <ScrollView contentContainerStyle={[s.bgPurple]}>
+      <ScrollView contentContainerStyle={[s.bgTheme]}>
         <TimeView />
         <View style={contentStyle}>
           <ImageView style={[s.flex1]} />
