@@ -5,12 +5,7 @@ import PropTypes from 'prop-types';
 
 import { Styles, Images } from '../constants';
 
-const images = [
-  'https://source.unsplash.com/1024x768/?nature',
-  'https://source.unsplash.com/1024x768/?water',
-  'https://source.unsplash.com/1024x768/?girl',
-  'https://source.unsplash.com/1024x768/?tree',
-];
+const images = [Images.IMAGE1, Images.IMAGE2, Images.IMAGE3, Images.IMAGE4, Images.IMAGE5];
 
 class ImageView extends Component {
   onImagePress = index => {
@@ -20,15 +15,22 @@ class ImageView extends Component {
         break;
 
       case 1:
-        console.warn('Image 2 pressed');
+        console.warn('Image 1 pressed');
         break;
 
       case 2:
-        alert('Image 3 pressed');
+        alert('Image 2 pressed');
         break;
 
       case 3:
+        console.warn('Image 3 pressed');
+        break;
+
+      case 4:
         console.warn('Image 4 pressed');
+        break;
+
+      default:
         break;
     }
   };
@@ -38,7 +40,12 @@ class ImageView extends Component {
     const imageStyle = [s.radius16, s.flex1];
     return (
       <View style={viewStyle}>
-        <SliderBox images={images} onCurrentImagePressed={this.onImagePress} />
+        <SliderBox
+          images={images}
+          resizeMode="stretch"
+          resizeMethod="scale"
+          // onCurrentImagePressed={this.onImagePress}
+        />
       </View>
     );
   }

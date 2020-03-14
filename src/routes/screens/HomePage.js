@@ -8,7 +8,6 @@ import {
   Text,
   TouchableOpacity,
 } from 'react-native';
-import TextTicker from 'react-native-text-ticker';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import {
@@ -17,6 +16,7 @@ import {
   TimeView,
   SearchBar,
   Thumbnail,
+  TextTicker,
   categories,
   campaigns,
   quickLinks,
@@ -114,7 +114,7 @@ class HomePage extends Component {
           s.overflowHidden,
         ]}>
         <View style={[s.bgDarkTheme, s.p4, s.radius6]}>
-          <Icon name={item.icon} size={28} color="#4357F9" />
+          <Icon name={item.icon} size={28} color="#3276B3" />
         </View>
         <Text textBreakStrategy="highQuality" style={[s.px4]}>
           {item.title}
@@ -148,7 +148,7 @@ class HomePage extends Component {
       <ScrollView contentContainerStyle={[s.bgTheme]}>
         <TimeView />
         <View style={contentStyle}>
-          <ImageView style={[s.flex1]} navigate={this.props.navigation.navigate} />
+          <ImageView style={[s.flex1]} />
           <View style={marqueeStyle}>
             <TextTicker
               style={marqueeTextStyle}

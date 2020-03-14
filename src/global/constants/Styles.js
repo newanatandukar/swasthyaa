@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   bgLighter: { backgroundColor: '#f1f5f8' },
   bgLightest: { backgroundColor: '#f8fafc' },
   bgWhite: { backgroundColor: '#fff' },
-  bgTheme: { backgroundColor: '#5C4DB1' },
+  bgTheme: { backgroundColor: '#1F5891' },
   bgDarkTheme: { backgroundColor: '#E8EAFF' },
   bgLightTheme: { backgroundColor: '#E3E5F9' },
   bgLightSecTheme: { backgroundColor: '#F5D3E1' },
@@ -200,10 +200,10 @@ const styles = StyleSheet.create({
   colorLightest: { color: '#f8fafc' },
   colorBlack: { color: '#221E20' },
   colorWhite: { color: '#f4f4f4' },
-  colorTheme: { color: '#5C4DB1' },
+  colorTheme: { color: '#1F5891' },
   colorLightTheme: { color: '#E3E5F9' },
   secondaryTheme: { color: '#DA5289' },
-  iconThemeColor: { color: '#4357F9' },
+  iconThemeColor: { color: '#3276B3' },
 
   strikeThrough: { textDecorationLine: 'line-through', textDecorationColor: '#b33423' },
 
