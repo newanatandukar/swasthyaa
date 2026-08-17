@@ -66,6 +66,25 @@ const appStack = createStackNavigator({
       headerBackTitleVisible: false,
     },
   },
+  newsView: {
+    screen: views.NewsView,
+    navigationOptions: {
+      headerBackTitleVisible: false,
+    },
+  },
+  videoView: {
+    screen: views.VideoView,
+    navigationOptions: {
+      headerBackTitleVisible: false,
+    },
+  },
+  underConstruction: {
+    screen: views.UnderConstruction,
+    navigationOptions: {
+      headerTitle: 'Under Construction',
+      headerBackTitleVisible: false,
+    },
+  },
 });
 
 const appContainer = createSwitchNavigator({

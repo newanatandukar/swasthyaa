@@ -36,6 +36,10 @@ const styles = StyleSheet.create({
   bgLighter: { backgroundColor: '#f1f5f8' },
   bgLightest: { backgroundColor: '#f8fafc' },
   bgWhite: { backgroundColor: '#fff' },
+  bgTheme: { backgroundColor: '#1F5891' },
+  bgDarkTheme: { backgroundColor: '#E8EAFF' },
+  bgLightTheme: { backgroundColor: '#E3E5F9' },
+  bgLightSecTheme: { backgroundColor: '#F5D3E1' },
 
   radius0: { borderRadius: 0 },
   radius1: { borderRadius: 1 },
@@ -43,7 +47,11 @@ const styles = StyleSheet.create({
   radius4: { borderRadius: 4 },
   radius6: { borderRadius: 6 },
   radius8: { borderRadius: 8 },
+  radius16: { borderRadius: 16 },
+  radius32: { borderRadius: 32 },
   radius999: { borderRadius: 999 },
+
+  radiusTop32: { borderTopLeftRadius: 32, borderTopRightRadius: 32 },
 
   dnone: { display: 'none' },
   flex: { display: 'flex' },
@@ -147,6 +155,8 @@ const styles = StyleSheet.create({
 
   maxHeightFull: { maxHeight: '100%' },
   maxWidthFull: { maxWidth: '100%' },
+  maxHeightHalf: { maxHeight: '25%' },
+  maxWidthHalf: { maxWidth: '50%' },
   minHeight0: { minHeight: 0 },
   minHeightFull: { minHeight: '100%' },
   minWidth0: { minWidth: 0 },
@@ -190,6 +200,10 @@ const styles = StyleSheet.create({
   colorLightest: { color: '#f8fafc' },
   colorBlack: { color: '#221E20' },
   colorWhite: { color: '#f4f4f4' },
+  colorTheme: { color: '#1F5891' },
+  colorLightTheme: { color: '#E3E5F9' },
+  secondaryTheme: { color: '#DA5289' },
+  iconThemeColor: { color: '#3276B3' },
 
   strikeThrough: { textDecorationLine: 'line-through', textDecorationColor: '#b33423' },
 
@@ -256,7 +270,7 @@ const styles = StyleSheet.create({
       width: 0,
       height: 1,
     },
-    shadowOpacity: 0.22,
+    shadowOpacity: 0.99,
     shadowRadius: 2.22,
     elevation: 3,
   },

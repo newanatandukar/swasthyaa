@@ -1,4 +1,3 @@
-import HomePage from './HomePage';
 import FamilyPlanning from './FamilyPlanning';
 import SafeMotherhood from './SafeMotherhood';
 import ChildHealth from './ChildHealth';
@@ -9,7 +8,6 @@ import FemaleHealthVolunteers from './FemaleHealthVolunteers';
 import Nutrition from './Nutrition';
 
 export {
-  HomePage,
   FamilyPlanning,
   SafeMotherhood,
   ChildHealth,

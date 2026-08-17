@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Text, View, StyleSheet, Image, FlatList, TouchableOpacity } from 'react-native';
-import { SafeAreaView } from 'react-navigation';
+import { ScrollView, View, StyleSheet, Image, FlatList, TouchableOpacity } from 'react-native';
 
-import { Images, Styles, categories } from '../../global';
+import { ImageView, Styles, categories, TimeView } from '../../global';
 
 class HomePage extends Component {
   renderCategories = ({ item }) => (
@@ -14,20 +13,23 @@ class HomePage extends Component {
   );
 
   render() {
+    const contentStyle = [s.bgWhite, s.flex1, s.pt4, s.radiusTop32];
+
     return (
-      <SafeAreaView>
-        <View>
-          <Image source={Images.DUMMY_IMAGE} resizeMode="contain" />
+      <ScrollView style={[s.bgTheme]}>
+        <TimeView />
+        <View style={contentStyle}>
+          <ImageView />
+          <View>
+            <FlatList
+              horizontal
+              data={categories}
+              renderItem={this.renderCategories}
+              keyExtractor={item => item.id}
+            />
+          </View>
         </View>
-        <View style={[s.mt24]}>
-          <FlatList
-            horizontal
-            data={categories}
-            renderItem={this.renderCategories}
-            keyExtractor={item => item.id}
-          />
-        </View>
-      </SafeAreaView>
+      </ScrollView>
     );
   }
 }

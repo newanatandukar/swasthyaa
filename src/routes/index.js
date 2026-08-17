@@ -1,5 +1,2 @@
-import Profile from './Profile';
-
-export { Profile };
-
+export * from './screens';
 export * from './categories';
